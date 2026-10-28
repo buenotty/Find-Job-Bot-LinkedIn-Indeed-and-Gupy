@@ -31,14 +31,14 @@ O perfil é montado com **um arquivo de texto que a pessoa preenche de uma vez**
 8. **Uma única mensagem de dúvidas.** Junte tudo o que você supôs ou não conseguiu mapear (nível de skill sem nível dado, datas faltando, ano de fim, idioma, disponibilidade, resultados em número) numa lista curta, com a sua suposição ao lado de cada item, e peça para a pessoa confirmar ou corrigir. Nunca invente número de resultado. Aplique as respostas com `python3 -m jobbot put <nome> <etapa> <arquivo.yaml>` (veja abaixo) ou refazendo a cópia corrigida; não mande a pessoa editar o arquivo de novo.
    **Se leu LinkedIn, GitHub ou currículo, acrescente nessa mesma mensagem uma lista curta "O que melhorar nos seus perfis"**: compare o que a pessoa de fato faz (skills, projetos e resultados que ela contou) com o que cada perfil público mostra, e aponte o que falta ou está desatualizado, com uma sugestão concreta por item (título do LinkedIn, skills e palavras-chave ausentes, seção Sobre, projetos no GitHub sem README, repositórios importantes privados, número de resultado que está só no currículo). Só sugestões: o bot nunca edita nada. O texto pronto vem depois, na skill `jobbot-profiles`.
 9. Rode `python3 -m jobbot form-gaps <nome>`. Se imprimir `sem lacunas`, pule este passo. Se gerar um arquivo de seguimento, **leia você mesma** as perguntas e traga-as na mesma conversa, em vez de mandar a pessoa para outro arquivo; grave as respostas no formato do seguimento e rode `python3 -m jobbot form-load <nome> <arquivo>`. Faça **no máximo um** seguimento.
-10. Rode `python3 -m jobbot validate <nome>`. Corrija com a pessoa só o que ele listar. Com `ok`, diga que o próximo passo é a skill `jobbot-assessment` (o teste de perfil, que melhora a escolha dos cargos) (ou `jobs-master` para ver o quadro).
+10. Rode `python3 -m jobbot validate <nome>`. Corrija com a pessoa só o que ele listar. Com `ok`, diga que o próximo passo é a skill `jobbot-market`. O teste de perfil (`jobbot-assessment`) é **opcional**: ofereça em uma frase só se a pessoa estiver indecisa sobre o que quer ou quiser mudar de área (ou `jobs-master` para ver o quadro).
 
 ## Regras
 
 - Nunca invente nem sugira número de resultado, empregador, cargo, data, formação ou certificação. O que a pessoa não escreveu fica em branco.
 - Se a pessoa preferir responder no chat, aceite, mas junte tudo e grave no mesmo formato: nunca devolva uma pergunta por vez.
 - Fale em "entregas" e "resultados" (o que a pessoa fez e o que mudou), não em termos técnicos como "bullet" ou "parser".
-- Escolhas A/B empatadas (4 a 4) deixam a trilha `indefinido`. Não force: o teste de perfil (`jobbot-assessment`) define a trilha com mais dados.
+- Escolhas A/B empatadas (4 a 4) deixam a trilha `indefinido`. Não force: a trilha pode ficar `indefinido`, e o teste de perfil (`jobbot-assessment`, opcional) só entra se a pessoa quiser.
 - Se duas respostas se contradizem, aponte numa única mensagem e deixe a pessoa decidir.
 - Se a skill `linkedin-interviewer` estiver instalada, pode usá-la para extrair entregas concretas. Sem ela, siga normalmente.
 

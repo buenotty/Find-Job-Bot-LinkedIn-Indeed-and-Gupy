@@ -13,6 +13,7 @@ class Stage:
     skill: str
     title: str
     done: bool = False
+    optional: bool = False  # never blocks the flow: skipped when picking the next skill
 
 
 @dataclass
@@ -23,7 +24,7 @@ class Journey:
 
 STAGES = (
     Stage("entrevista", "jobbot-interview", "Entrevista e perfil"),
-    Stage("teste", "jobbot-assessment", "Teste de perfil"),
+    Stage("teste", "jobbot-assessment", "Teste de perfil (opcional)", optional=True),
     Stage("mercado", "jobbot-market", "Cargos aprovados, mercado e foco recomendado"),
     Stage("perfis", "jobbot-profiles", "Perfis (LinkedIn, GitHub e outros) prontos e revisados"),
     Stage("tipos", "jobbot-types", "Um currículo para cada tipo de emprego"),
@@ -49,6 +50,6 @@ def journey(name: str) -> Journey:
         "tipos": _types_done(p, folder),
         "rodada": bool(p.applications),
     }
-    stages = [Stage(s.key, s.skill, s.title, done[s.key]) for s in STAGES]
-    pending = next((s for s in stages if not s.done), stages[-1])  # all done: keep running rounds
+    stages = [Stage(s.key, s.skill, s.title, done[s.key], s.optional) for s in STAGES]
+    pending = next((s for s in stages if not s.done and not s.optional), stages[-1])  # all done: keep running rounds
     return Journey(stages, pending.skill)

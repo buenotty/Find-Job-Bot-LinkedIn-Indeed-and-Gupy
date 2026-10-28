@@ -492,7 +492,7 @@ def _run_settings(a) -> int:
 def _next(a) -> int:
     j = journey(a.name)
     for n, stage in enumerate(j.stages, 1):
-        print(f"{n}. {stage.title} | {stage.skill} | {'feito' if stage.done else 'pendente'}")
+        print(f"{n}. {stage.title} | {stage.skill} | {'feito' if stage.done else 'opcional' if stage.optional else 'pendente'}")
     print(f"proximo: {j.next_skill}")
     return 0
 

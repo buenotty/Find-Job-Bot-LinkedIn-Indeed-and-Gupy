@@ -1,6 +1,6 @@
 ---
 name: jobbot-market
-description: Use depois da entrevista e do teste de perfil para descobrir em quais cargos a pessoa tem mais chance e qual deve ser o foco. Primeiro pesquisa sobre a própria pessoa e propõe de 5 a 8 cargos com o motivo de cada; só depois que ela aprova a lista, lê cerca de 50 vagas públicas por cargo aprovado, mede demanda, salário, concorrência e skills pedidas e escreve o relatório de foco. Gatilhos - "qual cargo focar", "analisar o mercado", "em que vagas eu me encaixo", "vale migrar de área".
+description: Use depois da entrevista (o teste de perfil é opcional) para descobrir em quais cargos a pessoa tem mais chance e qual deve ser o foco. Primeiro pesquisa sobre a própria pessoa e propõe de 5 a 8 cargos com o motivo de cada; só depois que ela aprova a lista, lê cerca de 50 vagas públicas por cargo aprovado, mede demanda, salário, concorrência e skills pedidas e escreve o relatório de foco. Gatilhos - "qual cargo focar", "analisar o mercado", "em que vagas eu me encaixo", "vale migrar de área".
 ---
 
 # JobBot: mercado e foco recomendado
@@ -11,7 +11,7 @@ São duas fases, com uma **parada obrigatória** entre elas. A fase 1 é sobre a
 
 - `python3 -m jobbot status <nome>` deve responder `completo` e `python3 -m jobbot validate <nome>` deve responder `ok`. Se não, volte à skill `jobbot-interview`.
 - A pasta da pessoa é a saída de `python3 -m jobbot path <nome>`. Leia o `profile.yaml` dela.
-- O teste de perfil (`jobbot-assessment`) deixa o diagnóstico bem melhor. Se `python3 -m jobbot behavior <nome>` vier com `ultimo_teste` vazio, ofereça fazer o teste agora (cerca de 10 minutos) ou seguir só com o perfil, e diga que sem teste o diagnóstico fica menos preciso. A decisão é da pessoa.
+- O teste de perfil (`jobbot-assessment`) é **opcional**. Sem ele, siga com a entrevista, o histórico e os dados de mercado; não pergunte de novo. Só ofereça o teste (cerca de 10 minutos) se a pessoa disser que está indecisa sobre os cargos.
 
 ## Fase 1: diagnóstico e cargos candidatos (sem ler vaga nenhuma)
 

@@ -15,12 +15,12 @@ Você é o guia do robô de vagas. Não faz o trabalho das etapas: descobre onde
 
 2. **Apresente o caminho em uma frase por etapa**, para quem chega sem conhecer o robô:
    1. `jobbot-interview`: você conta quem é (experiências, skills com nível, formação, restrições). Tudo fica só neste computador.
-   2. `jobbot-assessment`: teste de perfil de cerca de 10 minutos, que ajuda a escolher os cargos.
+   2. `jobbot-assessment` (**opcional**): teste de perfil de cerca de 10 minutos, para quem está indeciso sobre os cargos. Pule se você já sabe o que quer.
    3. `jobbot-market`: o bot pesquisa sobre você, propõe os cargos em que você tem mais chance e **espera a sua aprovação**; só então lê vagas reais desses cargos e recomenda o foco.
    4. `jobbot-profiles`: o bot mostra o que melhorar no LinkedIn, no GitHub e nas outras plataformas, escreve os textos e ajuda você a aplicar, até tudo estar pronto e revisado.
    5. `jobbot-types`: um currículo para cada tipo de emprego que você vai disputar.
    6. `jobbot-round` e `jobbot-status`: o bot busca vagas sozinho e, no modo autônomo (padrão), responde as perguntas e finaliza cada candidatura; no modo assistido, deixa uma aba aberta por vaga e você envia.
-3. **Descubra onde a pessoa está.** Pergunte o nome do perfil (o mesmo em todas as etapas) e rode `python3 -m jobbot next <nome>`. Se o comando falhar com `No module named jobbot`, a pessoa abriu o Claude sem o lançador: peça para abrir pelo `bin/jobs-master`. A saída lista as 6 etapas como `feito` ou `pendente` e termina com `proximo: <skill>`.
+3. **Descubra onde a pessoa está.** Pergunte o nome do perfil (o mesmo em todas as etapas) e rode `python3 -m jobbot next <nome>`. Se o comando falhar com `No module named jobbot`, a pessoa abriu o Claude sem o lançador: peça para abrir pelo `bin/jobs-master`. A saída lista as etapas como `feito`, `pendente` ou `opcional` e termina com `proximo: <skill>`.
 4. **Mostre o quadro** (o que está feito e o que falta) em poucas linhas e diga qual é a próxima etapa e por quê.
 5. **Entregue.** Confirme com a pessoa e siga com a skill indicada em `proximo`, seguindo as instruções dela. Ao terminar uma etapa, rode `python3 -m jobbot next <nome>` de novo e proponha a seguinte. A pessoa pode parar quando quiser: o estado fica salvo no perfil.
 

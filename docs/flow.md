@@ -4,7 +4,7 @@ Cada etapa só começa depois que a anterior está pronta e aprovada pela pessoa
 
 1. **Entrevista** (`jobbot-interview`). Pede no começo LinkedIn, GitHub, outros links e o currículo mais atual. Lê o que é público,
    pré-preenche o questionário e confirma as dúvidas numa mensagem só.
-2. **Teste de perfil** (`jobbot-assessment`). 83 afirmações e 3 perguntas abertas, cerca de 10 minutos. Dá código de Holland,
+2. **Teste de perfil, opcional** (`jobbot-assessment`). Não bloqueia o fluxo; só para quem está indeciso ou quer mudar de área. 83 afirmações e 3 perguntas abertas, cerca de 10 minutos. Dá código de Holland,
    personalidade, valores, âncoras, estilo de trabalho e trilha.
 3. **Cargos** (`jobbot-market`). Lista de 5 a 8 cargos com o motivo de cada. **Parada: a pessoa aprova.** Só então lê vagas dos
    cargos aprovados (palavras-chave, salário, concorrência), escreve o `focus-report.md` e registra os cargos aprovados.

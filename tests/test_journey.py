@@ -37,7 +37,7 @@ def test_incomplete_interview_keeps_the_interview_next(tmp_home):
 
 def test_each_stage_unlocks_the_next(tmp_home):
     finish_interview()
-    assert journey("Ana").next_skill == "jobbot-assessment"
+    assert journey("Ana").next_skill == "jobbot-market"  # the assessment is optional: it never blocks
     update_profile("Ana", lambda p: p.assessments.append(Assessment("2026-10-25", {}, "alta")))
     assert journey("Ana").next_skill == "jobbot-market"
     touch("Ana", "focus-report.md")

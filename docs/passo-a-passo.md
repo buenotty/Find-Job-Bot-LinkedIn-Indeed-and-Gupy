@@ -27,7 +27,7 @@ Digite `começar`. A skill `jobs-master` roda `python3 -m jobbot next <nome>`, q
 | # | Skill | Você faz | O bot faz | Sai dali |
 |---|---|---|---|---|
 | 1 | `jobbot-interview` | Preenche **um arquivo de texto** na pasta Downloads (`questionario-<nome>.txt`), do seu jeito: "avançado", "sim", "2 anos" servem | Interpreta as respostas, valida, pede só as lacunas | `profile.yaml` e relatório `01-perfil` |
-| 2 | `jobbot-assessment` | Responde o teste de ~10 minutos (nota de 1 a 5 por linha) | Calcula valores, interesses, personalidade, âncoras e estilo | Código Holland e trilha sugerida |
+| 2 (opcional) | `jobbot-assessment` | Responde o teste de ~10 minutos (nota de 1 a 5 por linha) | Calcula valores, interesses, personalidade, âncoras e estilo | Código Holland e trilha sugerida |
 | 3 | `jobbot-market` | Aprova a lista de cargos proposta | Lê ~50 vagas por cargo aprovado, estima salário quando a vaga não informa | `focus-report.md` |
 | 4 | `jobbot-profiles` | Autoriza as mudanças | Reescreve LinkedIn, GitHub e Gupy (e preenche, se você deixar) | Perfis revisados |
 | 5 | `jobbot-types` | Aprova os tipos de vaga | Cria um tipo por profissão (piso, modalidade, contrato) e um currículo PDF por tipo | `types/*.pdf` |

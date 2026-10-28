@@ -28,7 +28,7 @@ O `bin/jobs-master` cria o ambiente Python na primeira vez (precisa do Python 3.
 Peça `jobs-master` (ou diga "quero começar"): a skill lê o estado do seu perfil (`python3 -m jobbot next <nome>`) e leva você para a próxima etapa. As etapas, em ordem:
 
 1. `jobbot-interview`: monta o seu perfil com **um arquivo de texto que você preenche de uma vez** (`questionario-<seu-nome>.txt`, na pasta **Downloads**; o bot lê a devolutiva dali, sem você informar caminho, e depois **recolhe** o arquivo para a pasta interna do perfil: nada de pessoal fica em Downloads); o bot carrega tudo e faz no máximo um arquivo de seguimento, só com as lacunas.
-2. `jobbot-assessment`: teste de perfil (também um arquivo de texto na pasta Downloads, `teste-<seu-nome>.txt`, com um número de 1 a 5 em cada linha). Ele alimenta a escolha dos cargos.
+2. `jobbot-assessment` (**opcional**, para quem está indeciso sobre os cargos): teste de perfil (também um arquivo de texto na pasta Downloads, `teste-<seu-nome>.txt`, com um número de 1 a 5 em cada linha). Ele alimenta a escolha dos cargos.
 3. `jobbot-market`: o bot pesquisa sobre você e propõe os cargos em que você tem mais chance, **para você aprovar**. Só depois lê as vagas dos cargos aprovados e escreve o foco recomendado.
 4. `jobbot-profiles`: mostra o que melhorar no LinkedIn, no GitHub e nas outras plataformas, escreve os textos e ajuda você a aplicar, até tudo estar pronto e revisado.
 5. `jobbot-types` (e `jobbot-resume` por vaga): um currículo em PDF para cada tipo de emprego que você vai disputar.
@@ -50,7 +50,7 @@ Dependência opcional: `linkedin-skills` (`claude plugin marketplace add sergebu
 
 ## Orientação de carreira (B1)
 
-Depois do A, use as skills nesta ordem (o teste de perfil vem antes do mercado; está aqui por ser a camada B1):
+Depois do A, use as skills nesta ordem (o teste de perfil é opcional e, se feito, vem antes do mercado):
 
 1. `jobbot-assessment`: teste de cerca de 10 minutos (83 afirmações e 3 perguntas abertas: valores, interesses, personalidade, âncoras de carreira e estilo de trabalho). Pode ser pausado e retomado. Devolve percentuais por dimensão, relativos à pontuação máxima (não são ranking nem diagnóstico).
 2. `jobbot-orientation`: profissões sugeridas em dois grupos (disponíveis agora e as que exigem nova formação), com o custo de cada. Fala com franqueza sobre o que você ama e o que paga, só com dados de mercado: com menos de 30 vagas lidas ela escreve "indício", nunca "saturado".
