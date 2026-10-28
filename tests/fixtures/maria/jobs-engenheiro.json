@@ -1,0 +1,57 @@
+{
+ "role": "Engenheiro de Dados",
+ "jobs": [
+  {
+   "title": "Engenheiro de Dados",
+   "company": "Empresa 0",
+   "skills": [
+    "SQL",
+    "Python",
+    "Spark",
+    "Kafka"
+   ],
+   "salary_min": 5000,
+   "salary_max": 7000,
+   "url": "https://exemplo.test/0"
+  },
+  {
+   "title": "Engenheiro de Dados",
+   "company": "Empresa 1",
+   "skills": [
+    "SQL",
+    "Python",
+    "Spark",
+    "Kafka"
+   ],
+   "salary_min": 5000,
+   "salary_max": 7000,
+   "url": "https://exemplo.test/1"
+  },
+  {
+   "title": "Engenheiro de Dados",
+   "company": "Empresa 2",
+   "skills": [
+    "SQL",
+    "Python",
+    "Spark",
+    "Kafka"
+   ],
+   "salary_min": 5000,
+   "salary_max": 7000,
+   "url": "https://exemplo.test/2"
+  },
+  {
+   "title": "Engenheiro de Dados",
+   "company": "Empresa 3",
+   "skills": [
+    "SQL",
+    "Python",
+    "Spark",
+    "Kafka"
+   ],
+   "salary_min": 5000,
+   "salary_max": 7000,
+   "url": "https://exemplo.test/3"
+  }
+ ]
+}

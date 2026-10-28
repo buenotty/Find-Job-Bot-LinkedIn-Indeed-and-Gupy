@@ -1,0 +1,53 @@
+{
+ "role": "Analista de Dados",
+ "jobs": [
+  {
+   "title": "Analista de Dados",
+   "company": "Empresa 0",
+   "skills": [
+    "SQL",
+    "Power BI",
+    "Excel"
+   ],
+   "salary_min": 5000,
+   "salary_max": 7000,
+   "url": "https://exemplo.test/0"
+  },
+  {
+   "title": "Analista de Dados",
+   "company": "Empresa 1",
+   "skills": [
+    "SQL",
+    "Power BI",
+    "Excel"
+   ],
+   "salary_min": 5000,
+   "salary_max": 7000,
+   "url": "https://exemplo.test/1"
+  },
+  {
+   "title": "Analista de Dados",
+   "company": "Empresa 2",
+   "skills": [
+    "SQL",
+    "Power BI",
+    "Excel"
+   ],
+   "salary_min": 5000,
+   "salary_max": 7000,
+   "url": "https://exemplo.test/2"
+  },
+  {
+   "title": "Analista de Dados",
+   "company": "Empresa 3",
+   "skills": [
+    "SQL",
+    "Power BI",
+    "Excel"
+   ],
+   "salary_min": 5000,
+   "salary_max": 7000,
+   "url": "https://exemplo.test/3"
+  }
+ ]
+}

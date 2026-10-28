@@ -1,0 +1,368 @@
+- id: vsal01
+  layer: valores
+  dimension: salario
+  text: Ter um salário alto é muito importante para mim.
+- id: vsal03
+  layer: valores
+  dimension: salario
+  text: Ganhar bem importa pouco na hora de escolher um trabalho.
+  reverse: true
+  twin: vsal01
+- id: vest01
+  layer: valores
+  dimension: estabilidade_emprego
+  text: Ter um emprego seguro, sem risco de demissão, é essencial para mim.
+- id: vest03
+  layer: valores
+  dimension: estabilidade_emprego
+  text: Não me importo de trocar de emprego com frequência.
+  reverse: true
+  twin: vest01
+- id: vaut01
+  layer: valores
+  dimension: autonomia
+  text: Preciso decidir como organizar meu próprio trabalho.
+- id: vaut03
+  layer: valores
+  dimension: autonomia
+  text: Prefiro que alguém me diga exatamente o que fazer.
+  reverse: true
+  twin: vaut01
+- id: vpro01
+  layer: valores
+  dimension: proposito
+  text: Quero que meu trabalho tenha impacto positivo na vida das pessoas.
+- id: vpro03
+  layer: valores
+  dimension: proposito
+  text: Para mim, o trabalho é só uma forma de pagar as contas.
+  reverse: true
+  twin: vpro01
+- id: vcre01
+  layer: valores
+  dimension: crescimento
+  text: Quero aprender coisas novas o tempo todo no trabalho.
+- id: vcre03
+  layer: valores
+  dimension: crescimento
+  text: Prefiro fazer sempre as mesmas tarefas que já domino.
+  reverse: true
+  twin: vcre01
+- id: vequ01
+  layer: valores
+  dimension: equilibrio
+  text: Meu horário de trabalho precisa deixar tempo livre para a vida pessoal.
+- id: vequ03
+  layer: valores
+  dimension: equilibrio
+  text: Não me importo de fazer muitas horas extras com regularidade.
+  reverse: true
+  twin: vequ01
+- id: vrec01
+  layer: valores
+  dimension: reconhecimento
+  text: Quero que meu esforço seja reconhecido por colegas e chefes.
+- id: vrec03
+  layer: valores
+  dimension: reconhecimento
+  text: Não faz diferença para mim se ninguém notar meu trabalho.
+  reverse: true
+  twin: vrec01
+- id: vcol01
+  layer: valores
+  dimension: colaboracao
+  text: Prefiro trabalhar em equipe a trabalhar sozinho.
+- id: vcol03
+  layer: valores
+  dimension: colaboracao
+  text: Rendo mais quando trabalho completamente sozinho.
+  reverse: true
+  twin: vcol01
+- id: ipra01
+  layer: interesses
+  dimension: pratico
+  text: Montar ou consertar computadores, aparelhos ou máquinas.
+- id: ipra02
+  layer: interesses
+  dimension: pratico
+  text: Trabalhar com ferramentas, equipamentos ou veículos.
+- id: ipra08
+  layer: interesses
+  dimension: pratico
+  text: Descobrir por que um aparelho parou de funcionar e consertá-lo.
+- id: iinv01
+  layer: interesses
+  dimension: investigativo
+  text: Analisar dados para descobrir padrões.
+- id: iinv05
+  layer: interesses
+  dimension: investigativo
+  text: Investigar a causa de um problema complexo.
+- id: iinv07
+  layer: interesses
+  dimension: investigativo
+  text: Escrever código ou fórmulas para automatizar uma análise.
+- id: iart01
+  layer: interesses
+  dimension: artistico
+  text: Desenhar, pintar ou criar peças visuais.
+- id: iart04
+  layer: interesses
+  dimension: artistico
+  text: Produzir e editar vídeos ou fotos.
+- id: iart08
+  layer: interesses
+  dimension: artistico
+  text: Imaginar produtos, marcas ou campanhas originais.
+- id: isoc01
+  layer: interesses
+  dimension: social
+  text: Ensinar ou explicar algo a outras pessoas.
+- id: isoc02
+  layer: interesses
+  dimension: social
+  text: Ouvir e ajudar quem passa por uma dificuldade.
+- id: isoc07
+  layer: interesses
+  dimension: social
+  text: Atender clientes pessoalmente e resolver seus problemas.
+- id: iemp01
+  layer: interesses
+  dimension: empreendedor
+  text: Convencer pessoas a aderir a uma ideia ou comprar um produto.
+- id: iemp02
+  layer: interesses
+  dimension: empreendedor
+  text: Liderar uma equipe para atingir uma meta.
+- id: iemp03
+  layer: interesses
+  dimension: empreendedor
+  text: Abrir e administrar meu próprio negócio.
+- id: icon01
+  layer: interesses
+  dimension: convencional
+  text: Organizar planilhas, arquivos e documentos com precisão.
+- id: icon02
+  layer: interesses
+  dimension: convencional
+  text: Seguir procedimentos claros e conferir se tudo está certo.
+- id: icon08
+  layer: interesses
+  dimension: convencional
+  text: Padronizar processos para que tudo siga o mesmo método.
+- id: pext01
+  layer: personalidade
+  dimension: extroversao
+  text: Sou a alma da festa.
+- id: pext02
+  layer: personalidade
+  dimension: extroversao
+  text: Falo pouco.
+  reverse: true
+- id: pext09
+  layer: personalidade
+  dimension: extroversao
+  text: Costumo ser quem anima os encontros.
+  twin: pext01
+- id: pama01
+  layer: personalidade
+  dimension: amabilidade
+  text: Sinto pouca preocupação com os outros.
+  reverse: true
+- id: pama02
+  layer: personalidade
+  dimension: amabilidade
+  text: Interesso-me pelas pessoas.
+- id: pama09
+  layer: personalidade
+  dimension: amabilidade
+  text: Dou atenção ao que as pessoas têm a dizer.
+  twin: pama02
+- id: pcon04
+  layer: personalidade
+  dimension: conscienciosidade
+  text: Faço bagunça nas coisas.
+  reverse: true
+- id: pcon07
+  layer: personalidade
+  dimension: conscienciosidade
+  text: Gosto de ordem.
+- id: pcon09
+  layer: personalidade
+  dimension: conscienciosidade
+  text: Prefiro um ambiente organizado e arrumado.
+  twin: pcon07
+- id: pest01
+  layer: personalidade
+  dimension: estabilidade
+  text: Fico estressado com facilidade.
+  reverse: true
+- id: pest02
+  layer: personalidade
+  dimension: estabilidade
+  text: Sinto-me relaxado na maior parte do tempo.
+- id: pest09
+  layer: personalidade
+  dimension: estabilidade
+  text: Mantenho a calma mesmo em situações difíceis.
+  twin: pest02
+- id: pabe02
+  layer: personalidade
+  dimension: abertura
+  text: Tenho dificuldade de entender ideias abstratas.
+  reverse: true
+- id: pabe03
+  layer: personalidade
+  dimension: abertura
+  text: Tenho imaginação fértil.
+- id: pabe09
+  layer: personalidade
+  dimension: abertura
+  text: Gosto de imaginar possibilidades diferentes.
+  twin: pabe03
+- id: atec01
+  layer: ancoras
+  dimension: tecnica
+  text: Prefiro ser reconhecido como a pessoa que mais entende de uma especialidade.
+- id: atec03
+  layer: ancoras
+  dimension: tecnica
+  text: Quero que minha carreira seja construída em torno da minha área de domínio.
+- id: agen02
+  layer: ancoras
+  dimension: gestao
+  text: Gosto de ser responsável pelo resultado de uma equipe inteira.
+- id: agen04
+  layer: ancoras
+  dimension: gestao
+  text: Prefiro não ter ninguém sob minha responsabilidade.
+  reverse: true
+- id: aaut01
+  layer: ancoras
+  dimension: autonomia
+  text: Preciso decidir sozinho como, quando e onde faço meu trabalho.
+- id: aaut03
+  layer: ancoras
+  dimension: autonomia
+  text: Aceitaria um trabalho menos prestigiado para ter liberdade total no meu jeito de trabalhar.
+- id: aseg01
+  layer: ancoras
+  dimension: seguranca
+  text: Estabilidade no emprego pesa mais do que qualquer outra coisa na minha escolha.
+- id: aseg04
+  layer: ancoras
+  dimension: seguranca
+  text: Gosto de trabalhar onde há risco, mesmo sem garantia de continuidade.
+  reverse: true
+- id: aemp01
+  layer: ancoras
+  dimension: empreendedorismo
+  text: 'Quero criar algo meu: um negócio, um produto ou uma empresa.'
+- id: aemp03
+  layer: ancoras
+  dimension: empreendedorismo
+  text: Trabalhar para os outros por muito tempo, sem construir algo meu, me incomoda.
+- id: acri01
+  layer: ancoras
+  dimension: criatividade
+  text: 'Preciso criar coisas novas: produtos, soluções ou projetos que antes não existiam.'
+- id: acri03
+  layer: ancoras
+  dimension: criatividade
+  text: Trabalho repetitivo, sem espaço para ideias novas, me esgota.
+- id: aser01
+  layer: ancoras
+  dimension: servico
+  text: Quero que meu trabalho melhore de verdade a vida de outras pessoas.
+- id: aser03
+  layer: ancoras
+  dimension: servico
+  text: Trabalhar em algo que não ajuda ninguém me parece vazio.
+- id: adem01
+  layer: ancoras
+  dimension: desafio
+  text: Me motivo quando o problema é tão difícil que ninguém conseguiu resolver.
+- id: adem03
+  layer: ancoras
+  dimension: desafio
+  text: Me sinto vivo quando competo e venço, seja contra problemas ou contra pessoas.
+- id: aest01
+  layer: ancoras
+  dimension: estilo_vida
+  text: Meu trabalho precisa caber na minha vida pessoal e familiar, não o contrário.
+- id: aest03
+  layer: ancoras
+  dimension: estilo_vida
+  text: Flexibilidade de horário e de local vale mais para mim do que um cargo mais alto.
+- id: elid01
+  layer: estilo
+  dimension: lideranca
+  text: Costumo assumir a frente quando ninguém lidera um grupo.
+- id: elid04
+  layer: estilo
+  dimension: lideranca
+  text: Evito assumir a responsabilidade pelo trabalho dos outros.
+  reverse: true
+- id: ecom01
+  layer: estilo
+  dimension: comunicacao
+  text: Explico assuntos difíceis de um jeito que os outros entendem.
+- id: ecom04
+  layer: estilo
+  dimension: comunicacao
+  text: Tenho dificuldade de dizer o que penso com clareza.
+  reverse: true
+- id: epla01
+  layer: estilo
+  dimension: planejamento
+  text: Divido projetos grandes em etapas com prazos.
+- id: epla04
+  layer: estilo
+  dimension: planejamento
+  text: Costumo trabalhar de improviso, sem plano.
+  reverse: true
+- id: epro01
+  layer: estilo
+  dimension: resolucao
+  text: Quando algo quebra, procuro a causa antes de consertar.
+- id: epro04
+  layer: estilo
+  dimension: resolucao
+  text: Prefiro pedir ajuda logo a tentar resolver sozinho.
+  reverse: true
+- id: eada01
+  layer: estilo
+  dimension: adaptabilidade
+  text: Mudanças de prioridade não me desorganizam.
+- id: eada04
+  layer: estilo
+  dimension: adaptabilidade
+  text: Mudanças de última hora me deixam travado.
+  reverse: true
+- id: epre01
+  layer: estilo
+  dimension: pressao
+  text: Rendo bem com prazos curtos.
+- id: epre04
+  layer: estilo
+  dimension: pressao
+  text: Sob pressão, a qualidade do meu trabalho cai muito.
+  reverse: true
+- id: eapr01
+  layer: estilo
+  dimension: aprendizado
+  text: Estudo por conta própria, fora do horário, quando preciso.
+- id: eapr04
+  layer: estilo
+  dimension: aprendizado
+  text: Prefiro usar só o que já domino.
+  reverse: true
+- id: eres01
+  layer: estilo
+  dimension: resultado
+  text: Me preocupo em medir o resultado do que entrego.
+- id: eres04
+  layer: estilo
+  dimension: resultado
+  text: Quando o esforço foi grande, o resultado importa menos para mim.
+  reverse: true

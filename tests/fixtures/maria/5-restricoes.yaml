@@ -1,0 +1,6 @@
+constraints:
+  modality: [remoto, hibrido]
+  cities: [Rio de Janeiro]
+  vetoed_companies: [Empresa Vetada]
+  vetoed_sectors: []
+  current_employer: Loja Modelo

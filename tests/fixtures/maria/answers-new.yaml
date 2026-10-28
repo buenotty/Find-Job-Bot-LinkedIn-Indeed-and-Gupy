@@ -1,0 +1,2 @@
+- {question: "Qual seu animal favorito?", answer: "Gato", category: geral}
+- {question: "Você é pessoa com deficiência (PCD)?", answer: "Não", category: sensivel, always: true}

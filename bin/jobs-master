@@ -1,0 +1,19 @@
+#!/usr/bin/env bash
+# Abre o Claude Code com o plugin carregado e a CLI `jobbot` no PATH.
+# Na primeira vez cria o ambiente Python (.venv) e instala o pacote.
+set -euo pipefail
+
+ROOT="$(cd "$(dirname "${BASH_SOURCE[0]}")/.." && pwd)"
+
+if [ ! -x "$ROOT/.venv/bin/python" ]; then
+  PY="$(command -v python3.12 || command -v python3.11 || command -v python3.10 || true)"
+  if [ -z "$PY" ]; then
+    echo "erro: instale o Python 3.10 ou mais novo (por exemplo, brew install python@3.12)" >&2
+    exit 1
+  fi
+  "$PY" -m venv "$ROOT/.venv"
+  "$ROOT/.venv/bin/pip" install -q -e "$ROOT"
+fi
+
+export PATH="$ROOT/.venv/bin:$PATH"
+exec claude --plugin-dir "$ROOT" "$@"

@@ -1,0 +1,6 @@
+summary: "Analista de dados que automatiza relatórios e transforma dados de vendas em decisões."
+experience_bullets:
+  "Loja Modelo": ["Automatizei relatórios semanais de vendas, reduzindo o retrabalho em 30%, com SQL e Python"]
+project_bullets:
+  "Painel de vendas": ["Construí um painel em Power BI com dados públicos"]
+skill_order: [SQL, Power BI, Excel]

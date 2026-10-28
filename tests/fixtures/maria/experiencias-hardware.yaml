@@ -1,0 +1,11 @@
+experiences:
+  - company: Loja Modelo
+    role: Analista de Dados
+    start: "2021-02"
+    end: null
+    bullets:
+      - {text: "Automatizei relatórios semanais de vendas", metric: "30%"}
+projects:
+  - {name: Painel de vendas, description: "Painel em Power BI com dados públicos", url: null}
+  - {name: Montagem de PCs, description: "Montagem e upgrade de computadores para amigos", url: null, kind: autodidata, start: "2022-03"}
+  - {name: Suporte de TI na igreja, description: "Manutenção dos computadores da igreja", url: null, kind: voluntariado, start: "2023"}

@@ -1,0 +1,68 @@
+# JOBBOT:interview
+# QUESTIONÁRIO. Escreva depois dos dois pontos. Linhas com # são ignoradas.
+
+## 1. IDENTIDADE
+Nome completo: Maria Exemplo
+Idade: 28
+Estado: RJ
+Cidade: Rio de Janeiro
+
+## 2. EXPERIÊNCIAS
+[emprego]
+Empresa: Loja Modelo
+Cargo: Analista de Dados
+Início: 2021-02
+Fim:
+Entregas:
+- Automatizei relatórios semanais de vendas | 30%
+- Criei painéis de acompanhamento
+
+[projeto]
+Nome: Montagem de PCs
+Tipo: autodidata
+Início: 2022
+Fim:
+Descrição: Montagem e upgrade de computadores para amigos
+Link:
+
+## 3. SKILLS
+- SQL | especialista | uso diário há 4 anos
+- Python | médio | scripts de limpeza de dados
+- Excel | iniciante |
+
+## 4. CERTIFICAÇÕES, IDIOMAS E FORMAÇÃO
+Certificações:
+- Fundamentos de Dados | Plataforma Exemplo | 2022
+Idiomas:
+- Inglês | Profissional
+Formação:
+- USJT | Análise e Desenvolvimento de Sistemas | graduacao | 2022 | | cursando
+
+## 5. RESTRIÇÕES
+Modalidade: remoto, híbrido
+Cidades: Rio de Janeiro
+Empresas vetadas: Empresa Vetada
+Setores vetados:
+Empregador atual: Loja Modelo
+
+## 6. TRIAGEM
+Pretensão salarial: 7000
+Contrato: CLT
+Disponibilidade: 30 dias
+E-mail: maria@example.com
+Telefone: 21999990000
+Anos por skill:
+- SQL | 4
+- Python | 2,5
+
+## 7. ESTILO DE TRABALHO
+Escolha 1: A
+Escolha 2: A
+Escolha 3: B
+Escolha 4: A
+Escolha 5: A
+Escolha 6: A
+Escolha 7: A
+Escolha 8: A
+Estilo: Autonomia e foco em blocos longos
+Motivadores: aprender, impacto, estabilidade

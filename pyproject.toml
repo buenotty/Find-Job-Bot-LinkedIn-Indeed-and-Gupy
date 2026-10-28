@@ -1,0 +1,22 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "jobs-master-br-v1"
+version = "0.1.0"
+description = "JobBot: mapeamento de perfil e candidatura assistida para o mercado brasileiro"
+requires-python = ">=3.10"
+dependencies = ["pyyaml", "fpdf2"]
+
+[project.optional-dependencies]
+dev = ["pytest", "pypdf"]
+
+[tool.setuptools]
+packages = ["jobbot"]
+
+[tool.setuptools.package-data]
+jobbot = ["data/*.yaml"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]

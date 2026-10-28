@@ -1,0 +1,7 @@
+skills:
+  - {name: SQL, level: especialista, evidence: "uso diário há 4 anos"}
+  - {name: Python, level: medio, evidence: "scripts de limpeza de dados"}
+  - {name: Excel, level: especialista, evidence: "modelos financeiros"}
+  - {name: Power BI, level: medio, evidence: "painéis de vendas"}
+  - {name: Montagem de computadores, level: especialista, evidence: "montagens desde 2022"}
+  - {name: Diagnóstico de hardware, level: medio, evidence: "identificação de gargalos"}

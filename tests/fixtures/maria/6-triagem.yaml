@@ -1,0 +1,8 @@
+screening:
+  salary_expectation: 7000
+  contract: CLT
+  availability: "30 dias"
+  email: maria@example.com
+  phone: "21999990000"
+  years_by_skill: {SQL: 4, Python: 2}
+stretch_policy: {stretch_from: 90, risky_below: 50}

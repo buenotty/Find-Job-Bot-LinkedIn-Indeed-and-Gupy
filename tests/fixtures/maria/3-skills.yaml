@@ -1,0 +1,5 @@
+skills:
+  - {name: SQL, level: especialista, evidence: "uso diário há 4 anos"}
+  - {name: Python, level: medio, evidence: "scripts de limpeza de dados"}
+  - {name: Excel, level: especialista, evidence: "modelos financeiros"}
+  - {name: Power BI, level: medio, evidence: "painéis de vendas"}
