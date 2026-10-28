@@ -66,9 +66,10 @@ def test_no_owner_data_outside_docs():
     out = subprocess.run(["git", "ls-files", "--cached", "--others", "--exclude-standard"],
                          cwd=ROOT, capture_output=True, text=True, check=True).stdout.split()
     for p in out:
-        if p.startswith("docs/") or p.endswith(".pyc"):
-            continue
-        assert not banned.search((ROOT / p).read_text(encoding="utf-8", errors="ignore")), p
+        if p.startswith(("docs/", ".claude-plugin/")) or p.endswith(".pyc"):
+            continue  # the publisher handle is legitimate in plugin metadata and install commands
+        text = (ROOT / p).read_text(encoding="utf-8", errors="ignore").replace("bue" + "notty/jobbot", "")
+        assert not banned.search(text), p
 
 
 def test_interview_skill_warns_that_put_replaces_lists():
@@ -180,12 +181,12 @@ def test_platforms_reference_lists_stop_conditions():
 def test_round_skill_asks_when_behavior_data_is_blank_and_keeps_pending_questions():
     text = read_skill("jobbot-round").lower()
     assert "tudo em branco" in text and "pergunte à pessoa" in text
-    assert "só rode `python3 -m jobbot pending-clear" in text and "descartar" in text
+    assert "só rode `jobbot pending-clear" in text and "descartar" in text
 
 
 def test_master_skill_routes_the_whole_flow():
     text = read_skill("jobs-master")
-    assert "python3 -m jobbot next" in text and NOTICE in text
+    assert "jobbot next" in text and NOTICE in text
     for name in ("jobbot-interview", "jobbot-market", "jobbot-profiles", "jobbot-assessment",
                  "jobbot-types", "jobbot-round", "jobbot-status"):
         assert name in text, name
@@ -227,6 +228,6 @@ def test_form_skills_explain_that_loaded_forms_are_collected():
 def test_posts_skill_keeps_discretion_and_never_publishes_alone():
     text = read_skill("jobbot-posts")
     assert NOTICE in text
-    for rule in ("Discrição", "Confidencialidade", "Nunca publique sozinho", "python3 -m jobbot check",
+    for rule in ("Discrição", "Confidencialidade", "Nunca publique sozinho", "jobbot check",
                  "linkedin-content-planner", "linkedin-post-writer", "report-save"):
         assert rule in text, rule

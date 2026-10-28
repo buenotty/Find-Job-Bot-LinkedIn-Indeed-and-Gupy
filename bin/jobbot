@@ -1,0 +1,24 @@
+#!/usr/bin/env bash
+# Runs the JobBot CLI. Claude Code puts a plugin's bin/ on PATH, so the skills just call `jobbot`.
+# First run (and after each plugin update) it installs the package into a private venv.
+set -euo pipefail
+
+ROOT="$(cd "$(dirname "${BASH_SOURCE[0]}")/.." && pwd)"
+
+# Development checkout with its own venv (bin/jobs-master): use it as is.
+if [ -x "$ROOT/.venv/bin/python" ]; then
+  exec "$ROOT/.venv/bin/python" -m jobbot "$@"
+fi
+
+VENV="${JOBBOT_VENV:-$HOME/.jobbot/venv}"
+if [ ! -x "$VENV/bin/python" ] || [ "$(cat "$VENV/.installed-from" 2>/dev/null)" != "$ROOT" ]; then
+  PY="$(command -v python3.12 || command -v python3.11 || command -v python3.10 || command -v python3 || true)"
+  if [ -z "$PY" ] || ! "$PY" -c 'import sys; sys.exit(sys.version_info < (3, 10))'; then
+    echo "erro: instale o Python 3.10 ou mais novo (por exemplo, brew install python@3.12)" >&2
+    exit 1
+  fi
+  "$PY" -m venv "$VENV" >&2
+  "$VENV/bin/pip" install -q --upgrade "$ROOT" >&2
+  printf '%s' "$ROOT" > "$VENV/.installed-from"
+fi
+exec "$VENV/bin/python" -m jobbot "$@"

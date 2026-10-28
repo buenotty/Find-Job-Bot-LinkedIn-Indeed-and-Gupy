@@ -16,16 +16,29 @@ Automação em LinkedIn, Indeed e Gupy viola os termos dessas plataformas. O ris
 
 ## Instalação
 
+**Como plugin (recomendado), sem clonar nada.** Dentro do Claude Code:
+
+```
+/plugin marketplace add buenotty/jobbot
+/plugin install jobs-master-br-v1 --marketplace buenotty/jobbot
+```
+
+Depois diga "quero começar". O Claude Code coloca o `bin/` do plugin no PATH, e o comando `jobbot` instala o pacote Python num ambiente próprio (`~/.jobbot/venv`) na primeira chamada e de novo a cada atualização do plugin. Precisa do Python 3.10 ou mais novo.
+
+**Só a CLI**, para quem quer rodar fora do Claude Code: `pipx install git+https://github.com/buenotty/jobbot` e depois `jobbot --help`.
+
+**Para desenvolver (clone):**
+
 ```bash
-git clone <url deste repositório> jobbot && cd jobbot
+git clone https://github.com/buenotty/jobbot jobbot && cd jobbot
 bin/jobs-master
 ```
 
-O `bin/jobs-master` cria o ambiente Python na primeira vez (precisa do Python 3.10 ou mais novo), instala o pacote e abre o Claude Code com o plugin carregado e a CLI `jobbot` no PATH. Qualquer argumento extra vai direto para o `claude`. Se preferir abrir o Claude por conta própria, o `python3 -m jobbot --help` precisa funcionar no mesmo Python que o Claude Code usa.
+O `bin/jobs-master` cria o ambiente Python na primeira vez (precisa do Python 3.10 ou mais novo), instala o pacote e abre o Claude Code com o plugin carregado e a CLI `jobbot` no PATH. Qualquer argumento extra vai direto para o `claude`. Se preferir abrir o Claude por conta própria, o `jobbot --help` precisa funcionar no mesmo Python que o Claude Code usa.
 
 ## Por onde começar
 
-Peça `jobs-master` (ou diga "quero começar"): a skill lê o estado do seu perfil (`python3 -m jobbot next <nome>`) e leva você para a próxima etapa. As etapas, em ordem:
+Peça `jobs-master` (ou diga "quero começar"): a skill lê o estado do seu perfil (`jobbot next <nome>`) e leva você para a próxima etapa. As etapas, em ordem:
 
 1. `jobbot-interview`: monta o seu perfil com **um arquivo de texto que você preenche de uma vez** (`questionario-<seu-nome>.txt`, na pasta **Downloads**; o bot lê a devolutiva dali, sem você informar caminho, e depois **recolhe** o arquivo para a pasta interna do perfil: nada de pessoal fica em Downloads); o bot carrega tudo e faz no máximo um arquivo de seguimento, só com as lacunas.
 2. `jobbot-assessment` (**opcional**, para quem está indeciso sobre os cargos): teste de perfil (também um arquivo de texto na pasta Downloads, `teste-<seu-nome>.txt`, com um número de 1 a 5 em cada linha). Ele alimenta a escolha dos cargos.

@@ -9,11 +9,11 @@ O JobBot pode esticar **skills**: elas são testadas na entrevista e dá para ap
 - formação e certificações;
 - números de resultado (percentuais, valores, prazos).
 
-Isso vale mesmo se a pessoa pedir. Número de resultado só entra se ela o informou (`metric` no perfil). A CLI aplica a regra: `python3 -m jobbot check` e `python3 -m jobbot cv` recusam números sem respaldo no perfil.
+Isso vale mesmo se a pessoa pedir. Número de resultado só entra se ela o informou (`metric` no perfil). A CLI aplica a regra: `jobbot check` e `jobbot cv` recusam números sem respaldo no perfil.
 
 ## Regra de estiramento
 
-Compara as exigências de uma vaga com as skills da pessoa (`python3 -m jobbot match`). Os cortes ficam em `stretch_policy` e cada pessoa ajusta:
+Compara as exigências de uma vaga com as skills da pessoa (`jobbot match`). Os cortes ficam em `stretch_policy` e cada pessoa ajusta:
 
 | Match | Rótulo | Ação (padrão) |
 |---|---|---|

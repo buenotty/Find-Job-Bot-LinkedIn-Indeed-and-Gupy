@@ -9,7 +9,7 @@ Regras para falar com a pessoa quando o que ela ama e o que paga não coincidem.
 
 ## Regra de evidência
 
-- Toda afirmação sobre o mercado vem de dado lido, com o tamanho da amostra. Use `python3 -m jobbot market-claims` antes de dizer "saturado" ou "paga pouco".
+- Toda afirmação sobre o mercado vem de dado lido, com o tamanho da amostra. Use `jobbot market-claims` antes de dizer "saturado" ou "paga pouco".
 - Com menos de 30 vagas lidas, escreva "indício, amostra de N vagas".
 - Percentuais do teste são relativos à pontuação máxima de cada dimensão. Nunca os apresente como ranking nem como diagnóstico.
 - Nunca invente salário, preço de curso ou duração.

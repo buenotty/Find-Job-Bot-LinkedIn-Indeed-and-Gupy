@@ -1,0 +1,17 @@
+{
+  "name": "jobbot",
+  "owner": {
+    "name": "buenotty"
+  },
+  "plugins": [
+    {
+      "name": "jobs-master-br-v1",
+      "source": "./",
+      "description": "Bot autônomo de busca de vagas para o mercado brasileiro: entrevista, mercado, perfis, currículos e candidaturas.",
+      "author": {
+        "name": "buenotty"
+      }
+    }
+  ],
+  "description": "JobBot: bot autônomo de busca de vagas para o mercado brasileiro."
+}

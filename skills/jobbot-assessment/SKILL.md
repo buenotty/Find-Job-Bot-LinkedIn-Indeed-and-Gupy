@@ -9,14 +9,14 @@ O teste é **um arquivo de texto**: cada afirmação vem numa linha, e a pessoa 
 
 ## Antes de começar
 
-1. `python3 -m jobbot status <nome>` deve responder `completo` e `python3 -m jobbot validate <nome>` deve responder `ok`. Se não, volte à skill `jobbot-interview`.
-2. Rode `python3 -m jobbot form-new <nome> teste`. O arquivo é criado na pasta **Downloads** da pessoa. Mande **uma única mensagem** com o caminho e este resumo: 83 afirmações mais 3 perguntas abertas, cerca de 10 minutos; escreva o número depois do `=`, sem pensar na resposta certa; pode parar e voltar depois, o que ficar em branco continua pendente; os resultados ficam só neste computador.
+1. `jobbot status <nome>` deve responder `completo` e `jobbot validate <nome>` deve responder `ok`. Se não, volte à skill `jobbot-interview`.
+2. Rode `jobbot form-new <nome> teste`. O arquivo é criado na pasta **Downloads** da pessoa. Mande **uma única mensagem** com o caminho e este resumo: 83 afirmações mais 3 perguntas abertas, cerca de 10 minutos; escreva o número depois do `=`, sem pensar na resposta certa; pode parar e voltar depois, o que ficar em branco continua pendente; os resultados ficam só neste computador.
 
 ## Aplicação
 
-1. Quando a pessoa disser pronto, rode `python3 -m jobbot form-load <nome>`, sem caminho: ele acha o arquivo mais recente dela na pasta Downloads. Com o teste completo (ou com erro nenhum e o seguimento aplicado), o comando recolhe o arquivo para a pasta interna do perfil (`recolhido:`); com o teste pela metade, o arquivo fica em Downloads para a pessoa continuar. Se houver erros (número fora de 1 a 5, item desconhecido), o comando lista cada um com o número da linha e não salva nada: mostre a lista e peça para corrigir o mesmo arquivo.
-2. A saída mostra `respondidas: N/M`. Se faltar item, diga quantos faltam e deixe a pessoa continuar o mesmo arquivo quando quiser (rodar `form-load` de novo soma ao que já foi salvo). Se a pessoa preferir responder no chat, grave num YAML `id: valor` e use `python3 -m jobbot assess-answer <nome> <arquivo.yaml>`; use `python3 -m jobbot assess-status <nome>` para ver onde parou. Nunca preencha, sugira ou complete uma resposta pela pessoa.
-3. Quando a saída trouxer `proximo: assess-finish`, rode `python3 -m jobbot assess-finish <nome> --situations <pasta do perfil>/situations.yaml` (a pasta vem de `python3 -m jobbot path <nome>`; o arquivo existe se a pessoa respondeu as perguntas abertas).
+1. Quando a pessoa disser pronto, rode `jobbot form-load <nome>`, sem caminho: ele acha o arquivo mais recente dela na pasta Downloads. Com o teste completo (ou com erro nenhum e o seguimento aplicado), o comando recolhe o arquivo para a pasta interna do perfil (`recolhido:`); com o teste pela metade, o arquivo fica em Downloads para a pessoa continuar. Se houver erros (número fora de 1 a 5, item desconhecido), o comando lista cada um com o número da linha e não salva nada: mostre a lista e peça para corrigir o mesmo arquivo.
+2. A saída mostra `respondidas: N/M`. Se faltar item, diga quantos faltam e deixe a pessoa continuar o mesmo arquivo quando quiser (rodar `form-load` de novo soma ao que já foi salvo). Se a pessoa preferir responder no chat, grave num YAML `id: valor` e use `jobbot assess-answer <nome> <arquivo.yaml>`; use `jobbot assess-status <nome>` para ver onde parou. Nunca preencha, sugira ou complete uma resposta pela pessoa.
+3. Quando a saída trouxer `proximo: assess-finish`, rode `jobbot assess-finish <nome> --situations <pasta do perfil>/situations.yaml` (a pasta vem de `jobbot path <nome>`; o arquivo existe se a pessoa respondeu as perguntas abertas).
 
 ## Como apresentar o resultado
 
@@ -33,4 +33,4 @@ Depois, siga para a skill `jobbot-market`: ela usa este resultado para propor os
 
 ## Relatório para guardar
 
-No fim desta etapa, escreva um mini relatório em Markdown, em português, para a pessoa guardar (o que foi dito só no chat se perde): a leitura do resultado: código de Holland, personalidade, valores, âncoras, estilo de trabalho e trilha, cada um em linguagem direta, com o que isso pesa na escolha de cargo, os limites do teste e a data. Grave num arquivo temporário (nunca em Downloads) e rode `python3 -m jobbot report-save <nome> 02-teste-de-perfil <arquivo.md>`. A saída `relatorio:` mostra o caminho na pasta `Documents/JobBot/<nome>`; diga esse caminho à pessoa. Use só fatos do perfil e do que foi lido; o relatório não traz senha nem dado que a pessoa disse ser confidencial.
+No fim desta etapa, escreva um mini relatório em Markdown, em português, para a pessoa guardar (o que foi dito só no chat se perde): a leitura do resultado: código de Holland, personalidade, valores, âncoras, estilo de trabalho e trilha, cada um em linguagem direta, com o que isso pesa na escolha de cargo, os limites do teste e a data. Grave num arquivo temporário (nunca em Downloads) e rode `jobbot report-save <nome> 02-teste-de-perfil <arquivo.md>`. A saída `relatorio:` mostra o caminho na pasta `Documents/JobBot/<nome>`; diga esse caminho à pessoa. Use só fatos do perfil e do que foi lido; o relatório não traz senha nem dado que a pessoa disse ser confidencial.

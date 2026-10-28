@@ -11,16 +11,18 @@ Este guia leva uma pessoa nova do download do projeto até as candidaturas feita
 
 ## 1. Instalar
 
-```bash
-git clone <url deste repositório> jobbot && cd jobbot
-bin/jobs-master
+Dentro do Claude Code:
+
+```
+/plugin marketplace add buenotty/jobbot
+/plugin install jobs-master-br-v1 --marketplace buenotty/jobbot
 ```
 
-O comando cria o ambiente Python (`.venv`) na primeira vez, instala o pacote e abre o Claude Code com o plugin carregado. Nada pessoal fica no repositório: seus dados vão para `~/.jobbot/profiles/<seu-nome>/`.
+O comando `jobbot` (do `bin/` do plugin) cria um ambiente Python próprio em `~/.jobbot/venv` na primeira chamada e o atualiza quando o plugin muda. Para desenvolver, clone o repositório e use `bin/jobs-master`, que cria um `.venv` local e abre o Claude Code com o plugin carregado. Nada pessoal fica no repositório: seus dados vão para `~/.jobbot/profiles/<seu-nome>/`.
 
 ## 2. Começar
 
-Digite `começar`. A skill `jobs-master` roda `python3 -m jobbot next <nome>`, que lê o estado do perfil e diz a próxima etapa. Pode parar e voltar quando quiser: o estado fica salvo.
+Digite `começar`. A skill `jobs-master` roda `jobbot next <nome>`, que lê o estado do perfil e diz a próxima etapa. Pode parar e voltar quando quiser: o estado fica salvo.
 
 ## 3. As etapas, em ordem
 

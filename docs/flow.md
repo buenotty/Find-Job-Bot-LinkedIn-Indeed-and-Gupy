@@ -14,7 +14,7 @@ Cada etapa só começa depois que a anterior está pronta e aprovada pela pessoa
    aprovação dela em cada PDF.
 6. **Vagas** (`jobbot-round`). Só agora o bot busca vagas, gera o currículo de cada uma e deixa a aba aberta no último passo.
 
-**Relatórios.** Cada etapa termina com um mini relatório em Markdown que a pessoa guarda em `Documents/JobBot/<nome>/` (`python3 -m jobbot report-save`): `01-perfil`, `02-teste-de-perfil`, `03-cargos-e-mercado`, `04-perfis`, `05-curriculos` e `06-rodada-AAAA-MM-DD`. O que só foi dito no chat se perderia.
+**Relatórios.** Cada etapa termina com um mini relatório em Markdown que a pessoa guarda em `Documents/JobBot/<nome>/` (`jobbot report-save`): `01-perfil`, `02-teste-de-perfil`, `03-cargos-e-mercado`, `04-perfis`, `05-curriculos` e `06-rodada-AAAA-MM-DD`. O que só foi dito no chat se perderia.
 
 Fora da linha principal, sob pedido: `jobbot-orientation` e `jobbot-courses` (mudança de área, custo, trilha de cursos),
 `jobbot-resume` (currículo de uma vaga), `jobbot-status` e `jobbot-posts` (planejar e escrever posts de LinkedIn, sem denunciar busca de vaga e sem publicar sem o OK da pessoa).

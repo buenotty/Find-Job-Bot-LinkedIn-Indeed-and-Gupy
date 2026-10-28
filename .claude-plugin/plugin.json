@@ -1,6 +1,9 @@
 {
   "name": "jobs-master-br-v1",
   "description": "Mapeia seu perfil profissional, analisa o mercado e recomenda foco de carreira (mercado brasileiro).",
-  "version": "0.1.0",
-  "skills": "./skills"
+  "version": "0.2.0",
+  "skills": "./skills",
+  "author": {
+    "name": "buenotty"
+  }
 }

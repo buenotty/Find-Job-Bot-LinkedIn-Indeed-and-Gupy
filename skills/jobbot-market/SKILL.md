@@ -9,8 +9,8 @@ São duas fases, com uma **parada obrigatória** entre elas. A fase 1 é sobre a
 
 ## Pré-requisitos
 
-- `python3 -m jobbot status <nome>` deve responder `completo` e `python3 -m jobbot validate <nome>` deve responder `ok`. Se não, volte à skill `jobbot-interview`.
-- A pasta da pessoa é a saída de `python3 -m jobbot path <nome>`. Leia o `profile.yaml` dela.
+- `jobbot status <nome>` deve responder `completo` e `jobbot validate <nome>` deve responder `ok`. Se não, volte à skill `jobbot-interview`.
+- A pasta da pessoa é a saída de `jobbot path <nome>`. Leia o `profile.yaml` dela.
 - O teste de perfil (`jobbot-assessment`) é **opcional**. Sem ele, siga com a entrevista, o histórico e os dados de mercado; não pergunte de novo. Só ofereça o teste (cerca de 10 minutos) se a pessoa disser que está indecisa sobre os cargos.
 
 ## Fase 1: diagnóstico e cargos candidatos (sem ler vaga nenhuma)
@@ -20,7 +20,7 @@ São duas fases, com uma **parada obrigatória** entre elas. A fase 1 é sobre a
    - **por que combina**: a evidência no perfil, em uma frase;
    - **nível provável** de entrada;
    - **faixa de salário típica** (uma busca rápida em páginas públicas de salário, com fonte e data) contra a pretensão e o mínimo para presencial dela;
-   - **skills que faltam**: rode `python3 -m jobbot match <nome> --required "skill1,skill2,..."` com as skills que o cargo costuma pedir;
+   - **skills que faltam**: rode `jobbot match <nome> --required "skill1,skill2,..."` com as skills que o cargo costuma pedir;
    - **encaixe nas restrições** (modalidade, cidade, contrato).
 3. **PARE e peça aprovação.** Mostre a lista numa tabela curta e pergunte: quais ela aprova, quais descarta e se falta algum. **Não leia nenhuma vaga antes da resposta.** Se ela pedir mudanças, ajuste a lista e mostre de novo.
 
@@ -32,7 +32,7 @@ São duas fases, com uma **parada obrigatória** entre elas. A fase 1 é sobre a
    ```json
    {"role": "Analista de Dados", "jobs": [{"title": "...", "company": "...", "skills": ["SQL", "Power BI"], "salary_min": 5000, "salary_max": 7000, "applicants": 45, "url": "..."}]}
    ```
-7. **Ranking.** Rode `python3 -m jobbot market <nome> jobs-a.json jobs-b.json ...`. A tabela ordena por quanto do que o mercado mais pede a pessoa já tem, depois por número de vagas e por menos candidatos.
+7. **Ranking.** Rode `jobbot market <nome> jobs-a.json jobs-b.json ...`. A tabela ordena por quanto do que o mercado mais pede a pessoa já tem, depois por número de vagas e por menos candidatos.
 8. **Relatório.** Escreva `focus-report.md` na pasta da pessoa com:
    - o retrato e a lista de cargos aprovados (e os descartados, com o motivo);
    - a tabela do passo 7;
@@ -40,10 +40,10 @@ São duas fases, com uma **parada obrigatória** entre elas. A fase 1 é sobre a
    - as lacunas de skill de cada cargo e, para cada lacuna, um projeto prático de 1 a 2 dias que a cubra;
    - o tamanho real da amostra por cargo e os limites dela (só vagas públicas, poucos anúncios, salário ausente). Com menos de 30 vagas num cargo, diga que o resultado é apenas um indício.
 
-9. **Registrar os cargos aprovados.** Para cada cargo aprovado, grave um YAML com `role`, `source` (`sugerida` ou `propria`) e `required_skills` (as skills mais pedidas nas vagas lidas) e rode `python3 -m jobbot target-add <nome> <arquivo.yaml>`. É isso que libera o currículo por tipo na etapa seguinte.
+9. **Registrar os cargos aprovados.** Para cada cargo aprovado, grave um YAML com `role`, `source` (`sugerida` ou `propria`) e `required_skills` (as skills mais pedidas nas vagas lidas) e rode `jobbot target-add <nome> <arquivo.yaml>`. É isso que libera o currículo por tipo na etapa seguinte.
 
 Não decida pela pessoa: apresente a recomendação com o motivo e deixe a escolha final com ela. Depois, siga para a skill `jobbot-profiles`. Se a pessoa quiser mudar de área, ver custo de formação ou montar uma trilha de cursos, ofereça `jobbot-orientation` e `jobbot-courses`, que são opcionais.
 
 ## Relatório para guardar
 
-No fim desta etapa, escreva um mini relatório em Markdown, em português, para a pessoa guardar (o que foi dito só no chat se perde): o retrato da pessoa, os cargos aprovados e descartados (com o motivo), a tabela de mercado, o foco recomendado, as lacunas de skill com um projeto de 1 a 2 dias para cada, e o tamanho e os limites da amostra. É o `focus-report.md` com o resumo no topo. Grave num arquivo temporário (nunca em Downloads) e rode `python3 -m jobbot report-save <nome> 03-cargos-e-mercado <arquivo.md>`. A saída `relatorio:` mostra o caminho na pasta `Documents/JobBot/<nome>`; diga esse caminho à pessoa. Use só fatos do perfil e do que foi lido; o relatório não traz senha nem dado que a pessoa disse ser confidencial.
+No fim desta etapa, escreva um mini relatório em Markdown, em português, para a pessoa guardar (o que foi dito só no chat se perde): o retrato da pessoa, os cargos aprovados e descartados (com o motivo), a tabela de mercado, o foco recomendado, as lacunas de skill com um projeto de 1 a 2 dias para cada, e o tamanho e os limites da amostra. É o `focus-report.md` com o resumo no topo. Grave num arquivo temporário (nunca em Downloads) e rode `jobbot report-save <nome> 03-cargos-e-mercado <arquivo.md>`. A saída `relatorio:` mostra o caminho na pasta `Documents/JobBot/<nome>`; diga esse caminho à pessoa. Use só fatos do perfil e do que foi lido; o relatório não traz senha nem dado que a pessoa disse ser confidencial.
