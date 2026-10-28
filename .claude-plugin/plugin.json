@@ -5,5 +5,7 @@
   "skills": "./skills",
   "author": {
     "name": "buenotty"
-  }
+  },
+  "license": "MIT",
+  "repository": "https://github.com/buenotty/Find-Job-Bot-LinkedIn-Indeed-and-Gupy"
 }

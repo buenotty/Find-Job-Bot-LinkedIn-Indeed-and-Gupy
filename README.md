@@ -12,6 +12,8 @@ Plugin do Claude Code (antes chamado JobBot) que busca e se candidata a vagas no
 
 ## Aviso
 
+O modo padrão é **autônomo**: o bot responde perguntas e finaliza candidaturas sem pedir confirmação a cada vaga, usando só dados do seu perfil. Respostas a perguntas eliminatórias não podem ser editadas. Se prefere revisar antes de cada envio, rode `jobbot run-settings <nome> --autonomy assisted`.
+
 Automação em LinkedIn, Indeed e Gupy viola os termos dessas plataformas. O risco para a conta é de cada pessoa.
 
 ## Instalação
@@ -106,3 +108,7 @@ Rótulos de match: menos de 50% **Arriscado**; 50% a 69% **Chance média**; 70% 
 ```
 
 O teste `test_no_ebook_text` só roda com `JOBBOT_EBOOK_TXT` apontando para um texto de referência; ele garante que nenhum trecho de 8 palavras seguidas foi copiado.
+
+## Licença
+
+MIT. Veja `LICENSE`.
