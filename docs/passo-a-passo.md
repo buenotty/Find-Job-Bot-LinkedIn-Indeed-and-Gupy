@@ -14,8 +14,8 @@ Este guia leva uma pessoa nova do download do projeto até as candidaturas feita
 Dentro do Claude Code:
 
 ```
-/plugin marketplace add buenotty/jobbot
-/plugin install jobs-master-br-v1 --marketplace buenotty/jobbot
+/plugin marketplace add buenotty/Find-Job-Bot-LinkedIn-Indeed-and-Gupy
+/plugin install jobs-master-br-v1 --marketplace buenotty/Find-Job-Bot-LinkedIn-Indeed-and-Gupy
 ```
 
 O comando `jobbot` (do `bin/` do plugin) cria um ambiente Python próprio em `~/.jobbot/venv` na primeira chamada e o atualiza quando o plugin muda. Para desenvolver, clone o repositório e use `bin/jobs-master`, que cria um `.venv` local e abre o Claude Code com o plugin carregado. Nada pessoal fica no repositório: seus dados vão para `~/.jobbot/profiles/<seu-nome>/`.

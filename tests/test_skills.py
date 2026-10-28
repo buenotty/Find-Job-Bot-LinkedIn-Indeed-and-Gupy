@@ -68,7 +68,7 @@ def test_no_owner_data_outside_docs():
     for p in out:
         if p.startswith(("docs/", ".claude-plugin/")) or p.endswith(".pyc"):
             continue  # the publisher handle is legitimate in plugin metadata and install commands
-        text = (ROOT / p).read_text(encoding="utf-8", errors="ignore").replace("bue" + "notty/jobbot", "")
+        text = (ROOT / p).read_text(encoding="utf-8", errors="ignore").replace("bue" + "notty/Find-Job-Bot-LinkedIn-Indeed-and-Gupy", "")
         assert not banned.search(text), p
 
 

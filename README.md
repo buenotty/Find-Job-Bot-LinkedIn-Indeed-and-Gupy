@@ -19,18 +19,18 @@ Automação em LinkedIn, Indeed e Gupy viola os termos dessas plataformas. O ris
 **Como plugin (recomendado), sem clonar nada.** Dentro do Claude Code:
 
 ```
-/plugin marketplace add buenotty/jobbot
-/plugin install jobs-master-br-v1 --marketplace buenotty/jobbot
+/plugin marketplace add buenotty/Find-Job-Bot-LinkedIn-Indeed-and-Gupy
+/plugin install jobs-master-br-v1 --marketplace buenotty/Find-Job-Bot-LinkedIn-Indeed-and-Gupy
 ```
 
 Depois diga "quero começar". O Claude Code coloca o `bin/` do plugin no PATH, e o comando `jobbot` instala o pacote Python num ambiente próprio (`~/.jobbot/venv`) na primeira chamada e de novo a cada atualização do plugin. Precisa do Python 3.10 ou mais novo.
 
-**Só a CLI**, para quem quer rodar fora do Claude Code: `pipx install git+https://github.com/buenotty/jobbot` e depois `jobbot --help`.
+**Só a CLI**, para quem quer rodar fora do Claude Code: `pipx install git+https://github.com/buenotty/Find-Job-Bot-LinkedIn-Indeed-and-Gupy` e depois `jobbot --help`.
 
 **Para desenvolver (clone):**
 
 ```bash
-git clone https://github.com/buenotty/jobbot jobbot && cd jobbot
+git clone https://github.com/buenotty/Find-Job-Bot-LinkedIn-Indeed-and-Gupy jobbot && cd jobbot
 bin/jobs-master
 ```
 
